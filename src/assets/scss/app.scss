@@ -1,0 +1,189 @@
+@import "@/assets/fonts/Roboto/stylesheet.css";
+
+$font-family: "Roboto", Roboto, sans-serif;
+
+::selection {
+  background: black;
+  color: white;
+}
+
+* {
+  font-family: $font-family;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-align: center;
+  color: #2c3e50;
+  
+  width: 100%;
+  height: 100%;
+}
+
+#start-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: -60px;
+
+  @media (max-height: 512px) {
+    & {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-content: center;
+
+      margin-top: 0;
+    }
+  }
+}
+
+.card {
+  box-shadow: 0 0 6px #969696;
+  border-radius: 16px;
+
+  padding: 48px 32px;
+
+  max-width: 320px;
+  width: 100%;
+
+  @media (max-width: 384px) {
+    & {
+      padding: 48px 0;
+    }
+  }
+}
+
+input {
+  $root: &;
+
+  display: block;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  
+  &._unavailable {
+    border: 1px solid #ff6666 !important;
+  }
+  &._unavailable:hover {
+    border: 1px solid red !important;
+  }
+  
+  &[type="text"], &[type="password"] {
+    border-radius: 4px;
+    height: 32px;
+    border: gray solid 1px;
+    
+    &:hover {
+      border: black solid 1px;
+    }
+  }
+}
+
+input[type="submit"], input[type="button"], .btn {
+  border-radius: 4px;
+  height: 32px;
+
+  border: black solid 1px;
+  background-color: black;
+  color: white;
+
+  text-decoration: none;
+  
+  &:hover {
+    background-color: #444444;
+  }
+  
+  &:focus-within {
+    background-color: #555555;
+  }
+}
+
+input, button {
+  transition: 0.2s ease-in-out;
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: red;
+  }
+}
+
+label {
+  display: none;
+
+  &.hint {
+    &._show {
+      display: initial;
+    }
+
+    &._error {
+      display: initial;
+  
+      width: 100%;
+      text-align: left;
+      color: red;
+      font-size: 12px;
+    }
+  }
+}
+
+select {
+  border-radius: 4px;
+  height: 32px;
+  border: black solid 1px;
+  background-color: white;
+  color: black;
+  
+  &:hover {
+    background-color: #dddddd;
+  }
+  
+  &:focus-within {
+    background-color: white;
+  }
+}
+
+._tooltip:hover::before {
+  content: attr(data-tooltip);
+  
+  position: absolute;
+  
+  top: 0;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  
+  background-color: #dcdcdc;
+  border: 1px solid black;
+  color: black;
+  
+  width: 90%;
+  font-size: 12px;
+}

@@ -1,0 +1,22 @@
+#login-form, #signup-form {
+  $root: &;
+
+  width: 256px;
+  max-width: 100%;
+  margin: 8px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+
+  gap: 8px;
+}
+
+.sub-link {
+  color: gray;
+  text-decoration: underline;
+
+  font-size: 12px;
+}

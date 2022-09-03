@@ -1,0 +1,54 @@
+._thumbunload {
+  $root: &;
+
+  td::before,
+  &#pagination::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: linear-gradient(135deg, #aaaaaa, #bcbcbc, #dcdcdc);
+    background-size: 200% 200%;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-in-out;
+    animation: AnimationUnloadedElements 5s ease-in-out infinite;
+    z-index: 100;
+  }
+
+  &#pagination::before {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &._unload {
+    td::before,
+    &#pagination::before {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes AnimationUnloadedElements { 
+  0% { background-position: 10% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 10% 0%; }
+}
+
+@keyframes AnimationCopiedElement { 
+  0% { display: block; opacity: 0; }
+  20% { display: block; opacity: 1; }
+  80% { display: block; opacity: 1; }
+  100% { display: block; opacity: 0; }
+}

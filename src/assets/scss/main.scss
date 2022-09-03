@@ -1,0 +1,250 @@
+$base-table-header-background: #eee;
+$base-table-header-divider: #ccc;
+$base-table-body-background: #f7f7f7;
+$base-table-body-divider: #ddd;
+
+#service h1 {
+  font-size: 48px;
+  padding: 120px 0;
+  margin: 0;
+
+  @media (max-height: 600px) {
+    padding: 60px 0;
+  }
+
+  @media (max-height: 450px) {
+    padding: 30px 0;
+  }
+
+  @media (max-height: 375px) {
+    padding: 16px 0;
+  }
+}
+
+#shortlinks {
+  $root: &;
+
+  width: 100%;
+  max-width: 960px;
+
+  margin: 0 auto;
+
+  border-collapse: separate; 
+  border-spacing: 0 0; 
+
+  word-break: break-all;
+
+
+  th, td {
+    min-width: 128px;
+  }
+
+  thead {
+    tr {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+    }
+
+    th {
+      padding: 10px;
+      margin: 2px;
+      background-color: $base-table-header-background;
+      position: relative;
+
+      &:first-child {
+        border-left-style: solid;
+        border-left-color: $base-table-header-background;
+        border-top-left-radius: 10px; 
+      }
+
+      &:not(:last-child):after {
+        content: "";
+        height: 50%;
+        position: absolute;
+        right: 0;
+        top: 25%;
+        border-right: 1px solid $base-table-header-divider;
+      }
+
+      &:last-child {
+        border-right-style: solid;
+        border-right-color: $base-table-header-background;
+        border-top-right-radius: 10px; 
+      }
+
+      .mode-changer {
+        margin-left: 4px;
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        text-decoration: none;
+
+        &:hover {
+          color: white;
+          background-color: #444444;
+        }
+
+        &:focus {
+          color: white;
+          background-color: #555555;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+
+      &:not(:last-child) td {
+        border-bottom: 1px solid $base-table-body-divider;
+      }
+      
+      &:last-child {
+        td:first-child {
+          border-left-style: solid;
+          border-left-color: $base-table-body-background;
+          border-bottom-left-radius: 10px; 
+        }
+
+        td:last-child {
+            border-right-style: solid;
+            border-right-color: $base-table-body-background;
+            border-bottom-right-radius: 10px; 
+        }
+      }
+
+      td {
+        padding: 10px;
+        margin: 2px;
+        background-color: $base-table-body-background;
+        position: relative;
+
+        &:not(:last-child):after {
+          content: "";
+          height: 50%;
+          position: absolute;
+          right: 0;
+          top: 25%;
+          border-right: 1px solid $base-table-body-divider;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  td.nothing-element {
+    padding: 72px 24px;
+  }
+
+  .shortlinks-short-link {
+    text-decoration: underline;
+
+    div {
+      display: inline-block;
+
+      cursor: pointer;
+
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: red;
+      }
+
+      span::before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        margin-right: 4px;
+        background-image: url(@/assets/svg/copy.svg);
+        width: 16px;
+        height: 16px;
+        transition: 0.2s ease-in-out;
+      }
+
+      span:hover::before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        margin-right: 4px;
+        background-image: url(@/assets/svg/copy-hover.svg);
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .shortlinks-icon {
+      margin-right: 4px;
+    }
+  }
+}
+
+#squeeze-form {
+  $root: &;
+
+  width: 480px;
+  max-width: 100%;
+
+  margin: 16px auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 8px;
+
+  input[type="submit"] {
+    width: fit-content;
+  }
+}
+
+#pagination {
+  $root: &;
+
+  position: relative;
+  
+  width: fit-content;
+  
+  margin: 8px auto;
+  padding: 8px 4px;
+  
+  border-radius: 8px;
+
+  button {
+    padding: 4px 10px 4px 4px;
+    margin: 0 2px;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    letter-spacing: -6px;
+  }
+
+  span {
+    margin: 0 4px;
+  }
+}
+
+#copied-text {
+  display: block;
+
+  position: fixed;
+  left: 50%;
+  top: 25%;
+
+  transform: translateX(-50%);
+
+  opacity: 0;
+  pointer-events: none;
+
+  padding: 16px;
+
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+}
