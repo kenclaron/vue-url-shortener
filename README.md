@@ -1,5 +1,7 @@
 # URL Shortener Service
-> Website with working URL
+> * (!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!)
+ 
+> Website with working URL - https://vue-url-shortener-lleq2x883-kenclaron.vercel.app/
 
 > Project developed for `hex.team` company
 
