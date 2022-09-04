@@ -1,0 +1,5 @@
+/login http://http://79.143.31.216/login:splat 200!
+/register http://http://79.143.31.216/register:splat 200!
+/squeeze http://http://79.143.31.216/squeeze:splat 200!
+/statistics http://http://79.143.31.216/statistics:splat 200!
+/s/* http://http://79.143.31.216/s/*:splat 200!
