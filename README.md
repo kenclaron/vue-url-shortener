@@ -7,7 +7,7 @@
 
 ## Usage
 
-### **Through npm (Dev. ver.)**
+### **Through npm**
 * Install Node.js - https://nodejs.org/en/
 * Open console (`Win + R` with `cmd`) and type this command for clone git repository: `git clone https://github.com/kenclaron/vue-url-shortener.git`
 * Type: `cd ./vue-url-shortener`
