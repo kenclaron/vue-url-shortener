@@ -1,8 +1,4 @@
 # URL Shortener Service
-> **(!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!)**
- 
-> URL - https://vue-url-shortener-lleq2x883-kenclaron.vercel.app/
-
 > Project developed for `hex.team` company
 
 > Case: Create the front end of the link shortening service. The main functionality of the service is getting by an arbitrary link (URL => http://.../s/7ASMU), which redirects the user to the original page. In addition, the user who created the shortened link can view the number of clicks on that link. This information will not be available to other users. As a result, the user should be able to register on the site, log in, create an arbitrary number of shortened links and see the number of clicks on each of them.
@@ -48,7 +44,7 @@
 
 ### **Open Webpage**
 * Open: https://vue-url-shortener-lleq2x883-kenclaron.vercel.app/
-* (!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!)
+* **(!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!)**
 
 ## Project folder
 ```text
