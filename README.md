@@ -44,7 +44,7 @@
 
 ### **Open Webpage**
 * Open: https://vue-url-shortener-lleq2x883-kenclaron.vercel.app/
-* **(!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!)**
+* **(!!!) WARNING: API (`http://79.143.31.216/`) DOESN'T supports HTTPS, if you are developer of this API start using HTTPS (!!!) and THIS page may don't working correctly!** 
 
 ## Project folder
 ```text
