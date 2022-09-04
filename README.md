@@ -49,17 +49,17 @@
 ## Project folder
 ```text
 vue-url-shortener/
-├─── dist         - builded version
-├─── node_modules - npm libraries
-├─── src          - source files (.vue, .scss, .ts, images)
-├───── assets
-├─────── fonts
-├─────── router   - vue-router for links
-├─────── scss
-├─────── svg
-├─────── ts
-├───── components - pages (.vue)
-├─ ...
+├─ dist         - builded version
+├─ node_modules - npm libraries
+├─ src          - source files (.vue, .scss, .ts, images)
+├─ assets
+│  ├─ fonts
+│  ├─ router    - vue-router for links
+│  ├─ scss
+│  ├─ svg
+│  └─ ts
+├─ components   - pages (.vue)
+│  ...
 └─ {other_config_files}
 ```
 
